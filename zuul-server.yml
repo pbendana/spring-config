@@ -1,0 +1,11 @@
+server:
+  port: 7000 #puerto del zuul server
+zuul:
+  ignoredServices: "*"
+  routes:
+    servicio-empleados: #service to create a sample
+	  path: /empleados/**
+	  serviceId: servicio-empleados
+eureka:
+  client:
+    defaultZone: http://localhost:8761/eureka
